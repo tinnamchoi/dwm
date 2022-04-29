@@ -46,3 +46,13 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+Custom hotkeys 
+--------------
+Alt+X				Spawn dmenu  
+Alt+Shift+X			Close window  
+Ctrl+Alt+X			Spawn st  
+Alt+Left/Right Arrow		Change focus  
+Alt+Shift+Left/Right Arrow	Change master size  
+Alt+Up/Down Arrow		Change number of windows in master  
+Alt+G				Gapless grid layout  

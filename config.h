@@ -27,9 +27,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-};
+	{ NULL,       NULL,       NULL,       0,            False,       -1 },};
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
@@ -59,9 +57,21 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *fmcmd[]  = { "pcmanfm", NULL };
+static const char *discordcmd[]  = { "discord", NULL };
+static const char *firefoxcmd[]  = { "firefox", NULL };
+static const char *spotifycmd[]  = { "spotify-adblock.sh", NULL };
+static const char *obscmd[]  = { "obs", "--startreplaybuffer", NULL };
+static const char *vscodecmd[]  = { "code", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_e,      spawn,          {.v = fmcmd } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
+	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = obscmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_x,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -89,10 +99,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
@@ -101,7 +107,6 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },

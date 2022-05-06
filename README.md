@@ -49,12 +49,18 @@ and (re)compiling the source code.
 
 Custom hotkeys 
 --------------
-| Hotkey			| Action				|
+| Hotkey                        | Action                                |
 | ----------------------------- | ------------------------------------- | 
-| Alt+X				| Spawn dmenu				|  
-| Alt+Shift+X			| Close window				|  
-| Ctrl+Alt+X			| Spawn st				|  
-| Alt+Left/Right Arrow		| Change focus				|  
-| Alt+Shift+Left/Right Arrow	| Change master size			|  
-| Alt+Up/Down Arrow		| Change number of windows in master	|  
-| Alt+G				| Gapless grid layout			|  
+| Alt+X                         | Spawn dmenu                           |  
+| Alt+Shift+X                   | Close window                          |  
+| Ctrl+Alt+X                    | Spawn st                              |  
+| Alt+Left/Right Arrow          | Change focus                          |  
+| Alt+Shift+Left/Right Arrow    | Change master size                    |  
+| Alt+Up/Down Arrow             | Change number of windows in master    |  
+| Alt+G                         | Gapless grid layout                   |  
+| Alt+E                         | PCManFM                               |  
+| Alt+D                         | Discord                               |  
+| Alt+F                         | Firefox                               |
+| Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/app-launch-scripts) |
+| Alt+R                         | OBS with replay buffer on             |
+| Alt+C                         | VS Code                               |

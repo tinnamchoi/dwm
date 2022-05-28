@@ -58,9 +58,11 @@ Custom hotkeys
 | Alt+Shift+Left/Right Arrow    | Change master size                    |  
 | Alt+Up/Down Arrow             | Change number of windows in master    |  
 | Alt+G                         | Gapless grid layout                   |  
+| Alt+V                         | Centered master layout                |  
 | Alt+E                         | PCManFM                               |  
+| Alt+R                         | OBS with replay buffer on             |
+| Alt+A                         | pavucontrol                           |
+| Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/bash-scripts) |
 | Alt+D                         | Discord                               |  
 | Alt+F                         | Firefox                               |
-| Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/app-launch-scripts) |
-| Alt+R                         | OBS with replay buffer on             |
 | Alt+C                         | VS Code                               |

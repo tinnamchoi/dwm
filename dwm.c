@@ -43,6 +43,7 @@
 
 #include "drw.h"
 #include "util.h"
+#include "X11/XF86keysym.h"
 
 /* macros */
 #define BUTTONMASK              (ButtonPressMask|ButtonReleaseMask)

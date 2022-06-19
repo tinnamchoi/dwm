@@ -66,3 +66,4 @@ Custom hotkeys
 | Alt+D                         | Discord                               |  
 | Alt+F                         | Firefox                               |
 | Alt+C                         | VS Code                               |
+| PrtSc                         | Maim with dmenu                       |

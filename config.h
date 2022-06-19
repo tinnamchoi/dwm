@@ -49,7 +49,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -68,17 +68,23 @@ static const char *fmcmd[]  = { "pcmanfm", NULL };
 static const char *discordcmd[]  = { "discord", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *spotifycmd[]  = { "spotify-adblock.sh", NULL };
-static const char *obscmd[]  = { "obs", "--startreplaybuffer", NULL };
+static const char *obscmd[]  = { "obs", NULL };
+static const char *obsreplaycmd[]  = { "obs", "--startreplaybuffer", NULL };
 static const char *vscodecmd[]  = { "code", NULL };
 static const char *audiocmd[]  = { "pavucontrol", NULL };
+static const char *brightnesscmd[]  = { "brightness.sh", NULL };
+static const char *brightnessdowncmd[]  = { "brightness.sh", "down", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,             XF86XK_MonBrightnessUp,   spawn,          {.v = brightnesscmd } },
+	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdowncmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = obscmd } },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = obsreplaycmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = audiocmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = sscmd } },

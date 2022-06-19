@@ -77,46 +77,46 @@ static const char *brightnessdowncmd[]  = { "brightness.sh", "down", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,             XF86XK_MonBrightnessUp,   spawn,          {.v = brightnesscmd } },
-	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdowncmd } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = fmcmd } },
-	{ MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
-	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
-	{ MODKEY,                       XK_r,      spawn,          {.v = obscmd } },
-	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = obsreplaycmd } },
-	{ MODKEY,                       XK_c,      spawn,          {.v = vscodecmd } },
-	{ MODKEY,                       XK_a,      spawn,          {.v = audiocmd } },
-	{ 0,                            XK_Print,  spawn,          {.v = sscmd } },
-	{ MODKEY,                       XK_x,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ControlMask,           XK_x,      spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_Up,     incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_Down,   incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_v,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  layoutscroll,   {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brightnesscmd } },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdowncmd } },
+	{ MODKEY,                       XK_e,                     spawn,          {.v = fmcmd } },
+	{ MODKEY,                       XK_d,                     spawn,          {.v = discordcmd } },
+	{ MODKEY,                       XK_f,                     spawn,          {.v = firefoxcmd } },
+	{ MODKEY,                       XK_s,                     spawn,          {.v = spotifycmd } },
+	{ MODKEY,                       XK_r,                     spawn,          {.v = obscmd } },
+	{ MODKEY|ShiftMask,             XK_r,                     spawn,          {.v = obsreplaycmd } },
+	{ MODKEY,                       XK_c,                     spawn,          {.v = vscodecmd } },
+	{ MODKEY,                       XK_a,                     spawn,          {.v = audiocmd } },
+	{ 0,                            XK_Print,                 spawn,          {.v = sscmd } },
+	{ MODKEY,                       XK_x,                     spawn,          {.v = dmenucmd } },
+	{ MODKEY|ControlMask,           XK_x,                     spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_b,                     togglebar,      {0} },
+	{ MODKEY,                       XK_Right,                 focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Left,                  focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_Up,                    incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_Down,                  incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Left,                  setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_Right,                 setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_Return,                zoom,           {0} },
+	{ MODKEY,                       XK_Tab,                   view,           {0} },
+	{ MODKEY|ShiftMask,             XK_x,                     killclient,     {0} },
+	{ MODKEY,                       XK_t,                     setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_g,                     setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_v,                     setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_space,                 layoutscroll,   {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_space,                 togglefloating, {0} },
+	{ MODKEY,                       XK_0,                     view,           {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,                     tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_comma,                 focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period,                focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,                 tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period,                tagmon,         {.i = +1 } },
+	TAGKEYS(                        XK_1,                                     0)
+	TAGKEYS(                        XK_2,                                     1)
+	TAGKEYS(                        XK_3,                                     2)
+	TAGKEYS(                        XK_4,                                     3)
+	TAGKEYS(                        XK_5,                                     4)
+	{ MODKEY|ShiftMask,             XK_q,                     quit,           {0} },
 };
 
 /* button definitions */

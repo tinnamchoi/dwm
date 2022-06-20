@@ -49,21 +49,23 @@ and (re)compiling the source code.
 
 Custom hotkeys 
 --------------
-| Hotkey                        | Action                                |
-| ----------------------------- | ------------------------------------- | 
-| Alt+X                         | Spawn dmenu                           |  
-| Alt+Shift+X                   | Close window                          |  
-| Ctrl+Alt+X                    | Spawn st                              |  
-| Alt+Left/Right Arrow          | Change focus                          |  
-| Alt+Shift+Left/Right Arrow    | Change master size                    |  
-| Alt+Up/Down Arrow             | Change number of windows in master    |  
-| Alt+G                         | Gapless grid layout                   |  
-| Alt+V                         | Centered master layout                |  
-| Alt+E                         | PCManFM                               |  
-| Alt+R                         | OBS with replay buffer on             |
-| Alt+A                         | pavucontrol                           |
-| Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/bash-scripts) |
-| Alt+D                         | Discord                               |  
-| Alt+F                         | Firefox                               |
-| Alt+C                         | VS Code                               |
-| PrtSc                         | Maim with dmenu                       |
+| Hotkey                        | Action                                                                           |
+| ----------------------------- | -------------------------------------------------------------------------------- | 
+| Alt+X                         | Spawn dmenu                                                                      |  
+| Alt+Shift+X                   | Close window                                                                     |  
+| Ctrl+Alt+X                    | Spawn st                                                                         |  
+| Alt+Left/Right Arrow          | Change focus                                                                     |  
+| Alt+Shift+Left/Right Arrow    | Change master size                                                               |  
+| Alt+Up/Down Arrow             | Change number of windows in master                                               |  
+| Alt+G                         | Gapless grid layout                                                              |  
+| Alt+V                         | Centered master layout                                                           |  
+| Alt+E                         | PCManFM                                                                          |  
+| Alt+R                         | OBS                                                                              |
+| Alt+Shift+R                   | OBS with replay buffer on                                                        |
+| Alt+A                         | pavucontrol                                                                      |
+| Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/bash-scripts)               |
+| Alt+D                         | Discord                                                                          |  
+| Alt+F                         | Firefox                                                                          |
+| Alt+C                         | VS Code                                                                          |
+| PrtSc                         | [Quick screenshot with maim](https://github.com/tinnamchoi/bin#maim-dmenush)     |
+| Shift+PrtSc                   | [Screenshot with maim and dmenu](https://github.com/tinnamchoi/bin#maim-dmenush) |

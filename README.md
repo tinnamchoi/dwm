@@ -59,6 +59,7 @@ Custom hotkeys
 | Alt+Up/Down Arrow             | Change number of windows in master                                               |  
 | Alt+G                         | Gapless grid layout                                                              |  
 | Alt+V                         | Centered master layout                                                           |  
+| Alt+Space                     | Change layout                                                                    |
 | Alt+E                         | PCManFM                                                                          |  
 | Alt+R                         | OBS                                                                              |
 | Alt+Shift+R                   | OBS with replay buffer on                                                        |
@@ -69,3 +70,10 @@ Custom hotkeys
 | Alt+C                         | VS Code                                                                          |
 | PrtSc                         | [Quick screenshot with maim](https://github.com/tinnamchoi/bin#maim-dmenush)     |
 | Shift+PrtSc                   | [Screenshot with maim and dmenu](https://github.com/tinnamchoi/bin#maim-dmenush) |
+
+List of official [patches](https://dwm.suckless.org/patches/) applied
+---------------------------------------------------------------------
+* [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/)
+* [gaplessgrid](https://dwm.suckless.org/patches/gaplessgrid/)
+* [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/)
+* [systray](https://dwm.suckless.org/patches/systray/)

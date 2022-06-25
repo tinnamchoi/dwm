@@ -61,25 +61,35 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *sscmd[]  = { "maim-dmenu.sh", NULL };
-static const char *quicksscmd[]  = { "maim-dmenu.sh", "quick", NULL };
-static const char *fmcmd[]  = { "pcmanfm", NULL };
-static const char *discordcmd[]  = { "discord", NULL };
-static const char *firefoxcmd[]  = { "firefox", NULL };
-static const char *spotifycmd[]  = { "spotify-adblock.sh", NULL };
-static const char *obscmd[]  = { "obs", NULL };
-static const char *obsreplaycmd[]  = { "obs", "--startreplaybuffer", NULL };
-static const char *vscodecmd[]  = { "code", NULL };
-static const char *audiocmd[]  = { "pavucontrol", NULL };
-static const char *brightnesscmd[]  = { "brightness.sh", NULL };
+static const char *audiocmd[]           = { "pavucontrol", NULL };
+static const char *audiomutecmd[]       = { "pamixer", "-t", NULL };
+static const char *audiodowncmd[]       = { "pamixer", "-d", "2", NULL };
+static const char *audioupcmd[]         = { "pamixer", "-i", "2", NULL };
 static const char *brightnessdowncmd[]  = { "brightness.sh", "down", NULL };
+static const char *brightnessupcmd[]    = { "brightness.sh", NULL };
+static const char *discordcmd[]         = { "discord", NULL };
+static const char *dmenucmd[]           = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *firefoxcmd[]         = { "firefox", NULL };
+static const char *fmcmd[]              = { "pcmanfm", NULL };
+static const char *obscmd[]             = { "obs", NULL };
+static const char *obsreplaycmd[]       = { "obs", "--startreplaybuffer", NULL };
+static const char *quicksscmd[]         = { "maim-dmenu.sh", "quick", NULL };
+static const char *spotifycmd[]         = { "spotify-adblock.sh", NULL };
+static const char *sscmd[]              = { "maim-dmenu.sh", NULL };
+static const char *termcmd[]            = { "st", NULL };
+static const char *vscodecmd[]          = { "code", NULL };
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
-	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brightnesscmd } },
+	/* modifier                     key                       function        argument */
+	// function buttons
 	{ 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdowncmd } },
+	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brightnessupcmd } },
+	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = audiomutecmd } },
+	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = audiodowncmd } },
+	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = audioupcmd } },
+	{ 0,                            XK_Print,                 spawn,          {.v = sscmd } },
+	{ ShiftMask,                    XK_Print,                 spawn,          {.v = quicksscmd } },
+	// spawn apps
 	{ MODKEY,                       XK_e,                     spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_d,                     spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_f,                     spawn,          {.v = firefoxcmd } },
@@ -88,10 +98,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,                     spawn,          {.v = obsreplaycmd } },
 	{ MODKEY,                       XK_c,                     spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_a,                     spawn,          {.v = audiocmd } },
-	{ 0,                            XK_Print,                 spawn,          {.v = quicksscmd } },
-	{ ShiftMask,                    XK_Print,                 spawn,          {.v = sscmd } },
 	{ MODKEY,                       XK_x,                     spawn,          {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_x,                     spawn,          {.v = termcmd } },
+	// dwm functions
 	{ MODKEY,                       XK_b,                     togglebar,      {0} },
 	{ MODKEY,                       XK_Right,                 focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,                  focusstack,     {.i = -1 } },

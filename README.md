@@ -67,9 +67,10 @@ Custom hotkeys
 | Alt+S                         | [Spotify with adblock](https://github.com/tinnamchoi/bash-scripts)               |
 | Alt+D                         | Discord                                                                          |  
 | Alt+F                         | Firefox                                                                          |
+| Alt+Shift+F                   | Chrome                                                                           |
 | Alt+C                         | VS Code                                                                          |
-| PrtSc                         | [Quick screenshot with maim](https://github.com/tinnamchoi/bin#maim-dmenush)     |
-| Shift+PrtSc                   | [Screenshot with maim and dmenu](https://github.com/tinnamchoi/bin#maim-dmenush) |
+| PrtSc                         | [Screenshot with maim and dmenu](https://github.com/tinnamchoi/bin#maim-dmenush) |
+| Shift+PrtSc                   | [Quick screenshot with maim](https://github.com/tinnamchoi/bin#maim-dmenush)     |
 
 List of official [patches](https://dwm.suckless.org/patches/) applied
 ---------------------------------------------------------------------

@@ -75,8 +75,8 @@ Custom hotkeys
 List of official [patches](https://dwm.suckless.org/patches/) applied
 ---------------------------------------------------------------------
 * [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/)
+* [dwmc](https://dwm.suckless.org/patches/dwmc/)
 * [gaplessgrid](https://dwm.suckless.org/patches/gaplessgrid/)
 * [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/)
-* [systray](https://dwm.suckless.org/patches/systray/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
-
+* [systray](https://dwm.suckless.org/patches/systray/)

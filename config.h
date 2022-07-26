@@ -65,11 +65,6 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *audiocmd[]           = { "pavucontrol", NULL };
-static const char *audiomutecmd[]       = { "pamixer", "-t", NULL };
-static const char *audiodowncmd[]       = { "pamixer", "-d", "2", NULL };
-static const char *audioupcmd[]         = { "pamixer", "-i", "2", NULL };
-static const char *brightnessdowncmd[]  = { "brightness.sh", "down", NULL };
-static const char *brightnessupcmd[]    = { "brightness.sh", NULL };
 static const char *chromecmd[]          = { "google-chrome-stable", NULL };
 static const char *discordcmd[]         = { "discord", NULL };
 static const char *dmenucmd[]           = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
@@ -86,11 +81,6 @@ static const char *vscodecmd[]          = { "code", NULL };
 static Key keys[] = {
 	/* modifier                     key                       function        argument */
 	// function buttons
-	{ 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdowncmd } },
-	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brightnessupcmd } },
-	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = audiomutecmd } },
-	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = audiodowncmd } },
-	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = audioupcmd } },
 	{ 0,                            XK_Print,                 spawn,          {.v = sscmd } },
 	{ ShiftMask,                    XK_Print,                 spawn,          {.v = quicksscmd } },
 	// spawn apps

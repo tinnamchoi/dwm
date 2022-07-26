@@ -77,6 +77,7 @@ List of official [patches](https://dwm.suckless.org/patches/) applied
 * [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/)
 * [dwmc](https://dwm.suckless.org/patches/dwmc/)
 * [gaplessgrid](https://dwm.suckless.org/patches/gaplessgrid/)
+* [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 * [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
 * [systray](https://dwm.suckless.org/patches/systray/)

@@ -81,3 +81,5 @@ List of official [patches](https://dwm.suckless.org/patches/) applied
 * [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/)
 * [swallow](https://dwm.suckless.org/patches/swallow/)
 * [systray](https://dwm.suckless.org/patches/systray/)
+
+> Note: The swallow patch is temporarily removed due to the current lack of option for toggling.
